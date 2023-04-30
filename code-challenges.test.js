@@ -232,4 +232,4 @@ const vowIndex = (string) => {
 // strCap
 //   ✓ changes each string to capitalized letters
 // vowIndex
-//   ✓ returns the index of the first vowel encountered
+//   ✓ returns the index of the first vowel encountered`
