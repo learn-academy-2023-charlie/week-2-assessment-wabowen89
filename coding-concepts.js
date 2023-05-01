@@ -75,7 +75,11 @@ class Learn {
   }
 }
 const learnStudent = new Learn("George")
-// console.log(learnStudent)
+console.log(learnStudent)
 
-// a) Your answer:
-// b) Verify and explain:
+// a) Your answer: { "George", "Charlie", "2023"}
+  // The class Learn defines an object that has three properties. 'cohort' and 'year' are predefined, whereas 'student' is an argument that is passed to the class. learnStudent creates a new Learn object and passes the argument "George" as a string to the class. As a result, if the object learnStudent is logged, the properties will be printed out.
+
+// b) Verify and explain: Learn { student: 'George', cohort: 'Charlie', year: 2023 }
+  // When logging an object, the properties defined in the constructor will be printed out. These properties will be printed in the key value pairing as they have been coded in the constructor. As a result, the class name will be printed followed by curly braces. Inside the curly braces, each key value pair will be printed as key name: value. Therefore, when learnStudent is logged, we receive Learn { student: 'George', cohort: 'Charlie', year: 2023 }.
+

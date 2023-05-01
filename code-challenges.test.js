@@ -75,6 +75,13 @@ describe("divThree", () => {
 //   ✓ Determines if the number is evenly distributed by three and returns a string (1 ms)
 
 // Refactor
+// Pseudo code:
+// input: object
+// output: string
+// function name: divThree
+    // use "object" as parameter for the function
+    // return a string listing the number provided and string stating whether or not it is evenly divisible by three (possible tool: ternary operator)
+// expected output: "15 is divisible by three", "0 is divisible by three", "-7 is not divisible by three"
 
 const divThree = (object) => {
     return object.number % 3 === 0 ? `${object.number} is divisible by three` : `${object.number} is not divisible by three`
@@ -123,8 +130,7 @@ describe("strCap", () => {
 // b) Create the function that makes the test pass.
 
 const strCap = (array) => {
-    return array.map(value => value[0].toUpperCase() + value.substring(1)
-    )
+    return array.map(value => value[0].toUpperCase() + value.substring(1))
 }
 
 // Success
@@ -147,11 +153,12 @@ const strCap = (array) => {
 // output: number
 // function name: vowIndex
     // iterate through the string
-    // compare each character to a set of vowels (possible tool: conditionals/ .filter)
+    // compare each character to a set of vowels (possible tool: conditionals)
     // return the numberical index value of the first vowel encountered
 // expected output: 1, 0, 2
 
 // a) Create a test with expect statements for each of the variables provided.
+
 describe("vowIndex", () => {
     it("returns the index of the first vowel encountered", () => {
         const vowelTester1 = "learn"
@@ -213,12 +220,22 @@ describe("vowIndex", () => {
 //   ✓ returns the index of the first vowel encountered
 
 // Refactor
+// Pseudo code:
+// input: string
+// output: number
+// function name: vowIndex
+    // create a new string with each of the vowels
+    // iterate through the original string using a for loop
+    // iterate through the vowel string using a nested for loop
+    // compare each vowel to each character in the original string (possible tool: conditionals)
+    // return the numberical index value of the first vowel encountered
+// expected output: 1, 0, 2
 
 const vowIndex = (string) => {
-    let newStr = "aeiou"
+    let vowels = "aeiou"
     for (let i = 0; i < string.length; i++) {
-        for (let k = 0; k < newStr.length; k++){
-            if (newStr[k] === string[i]) {
+        for (let k = 0; k < vowels.length; k++){
+            if (vowels[k] === string[i]) {
                 return i
             }
         }
